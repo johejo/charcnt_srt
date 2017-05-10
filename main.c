@@ -2,41 +2,47 @@
 
 int main(int argc, char *argv[]) {
 
-    //check command line parameter
-    if (argc == 1) {
+//  Check command line parameter
+    if (!(argc == 2 || argc == 3)) {
         fprintf(stderr, "Usage:./charcnt [OPTION] [FILE_NAME].\n");
         exit(EXIT_FAILURE);
     }
 
-    opterr = 0; //getopt()のエラーメッセージを無効にする
+    opterr = 0;
 
     int opt;
+    int optf = 0;
 
-    while ((opt = getopt(argc, argv, "adh:")) != -1) {
+//  Get option and count
+    while ((opt = getopt(argc, argv, "adh")) != -1) {
+        optf = 1;
         switch (opt) {
             case 'a':
-                count(opt, argv[2]);
+                count('a', argv[2]);
                 break;
 
             case 'd':
-                count(opt, argv[2]);
+                count('d', argv[2]);
                 break;
 
             case 'h':
-                exit(1);
+                printf("Usage: %s [-a] [-d] [-h] [FILE_NAME]\n", argv[0]);
+                printf("There are some option in this program.\n");
+                printf("If you do not specify an option, display results in ASCII code order.\n");
+                printf("-a\tDisplay results in ascending order.\n");
+                printf("-d\tDisplay results in descending order.\n");
+                printf("-h\tDisplay this help.\n");
+                break;
 
-            default: /* '?' */
-                //指定していないオプションが渡された場合
-                printf("Usage: %s [-f] [-g] [-h argment] arg1 ...\n", argv[0]);
+            default:
+                fprintf(stderr, "Usage: %s [-a] [-d] [-h] [FILE_NAME]\n", argv[0]);
                 break;
         }
     }
 
-    // puts("HELLO");
-    //オプション以外の引数を出力する
-    int i;
-    for (i = optind; i < argc; i++) {
-        printf("arg = %s\n", argv[i]);
+//  No option (ASCII code order)
+    if (optf == 0) {
+        count('m', argv[1]);
     }
 
     return 0;

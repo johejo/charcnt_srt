@@ -1,21 +1,9 @@
-//
-// Created by heijo on 17/05/09.
-//
-
-#ifndef CHARCNT_SRT_DEFS_H
-#define CHARCNT_SRT_DEFS_H
-
-#endif //CHARCNT_SRT_DEFS_H
-//
-// Created by heijo
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-#define LIST_SIZE 123
-#define START 48
+#define END '~'
+#define BEGIN '!'
 
 typedef struct myChar{
     char c;
