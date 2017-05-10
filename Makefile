@@ -1,6 +1,6 @@
 CC = gcc
 PROGRAM=charcnt_srt
-CFLAGS = -Wall -g
+CFLAGS = -Wall -O
 OBJS = main.o count.o sort.o
 $(PROGRAM) : $(OBJS)
 	$(CC) $(OBJS) -o $(PROGRAM)
