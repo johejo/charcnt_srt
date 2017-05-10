@@ -1,6 +1,6 @@
 #include "defs.h"
 
-void count(int opt, char *filename){
+void count(int debug, int opt, char *filename){
     //Open file
     FILE *fp;
     if ((fp = fopen(filename, "r")) == NULL) {
@@ -51,6 +51,17 @@ void count(int opt, char *filename){
         case 'a':
             quicksort(LIST, 0, END - BEGIN);
             for (i = BEGIN, p = LIST; i < END; i++, p++) {
+                if (!debug) {
+                    if ((p -> c >= '!' && p -> c <= '/')) {
+                        continue;
+                    } else if ((p -> c >= ':' && p -> c <= '@')) {
+                        continue;
+                    } else if ((p -> c >= '[' && p -> c <= '`')) {
+                        continue;
+                    } else if ((p -> c >= '{' && p -> c <= '~')) {
+                        continue;
+                    }
+                }
                 printf("%c:%d\n", p -> c, p -> n);
             }
             printf("\n");
@@ -58,6 +69,17 @@ void count(int opt, char *filename){
         case 'd':
             quicksort(LIST, 0, END -BEGIN);
             for (i = BEGIN, p = LIST + END - BEGIN - 1; i < END; i++, p--) {
+                if (!debug) {
+                    if ((p -> c >= '!' && p -> c <= '/')) {
+                        continue;
+                    } else if ((p -> c >= ':' && p -> c <= '@')) {
+                        continue;
+                    } else if ((p -> c >= '[' && p -> c <= '`')) {
+                        continue;
+                    } else if ((p -> c >= '{' && p -> c <= '~')) {
+                        continue;
+                    }
+                }
                 printf("%c:%d\n", p -> c, p -> n);
             }
             printf("\n");
@@ -65,6 +87,17 @@ void count(int opt, char *filename){
 
         case 'm':
             for (i = BEGIN, p = LIST; i < END; i++, p++) {
+                if (!debug) {
+                    if ((p -> c >= '!' && p -> c <= '/')) {
+                        continue;
+                    } else if ((p -> c >= ':' && p -> c <= '@')) {
+                        continue;
+                    } else if ((p -> c >= '[' && p -> c <= '`')) {
+                        continue;
+                    } else if ((p -> c >= '{' && p -> c <= '~')) {
+                        continue;
+                    }
+                }
                 printf("%c:%d\n", p -> c, p -> n);
             }
             printf("\n");

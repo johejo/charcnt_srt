@@ -11,4 +11,4 @@ typedef struct myChar{
 }MYCHAR;
 
 void quicksort(MYCHAR LIST[], int left, int right);
-void count(int opt, char *filename);
+void count(int debug, int opt, char *filename);

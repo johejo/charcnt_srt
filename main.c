@@ -12,26 +12,32 @@ int main(int argc, char *argv[]) {
 
     int opt;
     int optf = 0;
+    int debug = 0;
 
 //  Get option and count
-    while ((opt = getopt(argc, argv, "adh")) != -1) {
+    while ((opt = getopt(argc, argv, "adhg")) != -1) {
         optf = 1;
         switch (opt) {
             case 'a':
-                count('a', argv[2]);
+                count(debug, 'a', argv[2]);
                 break;
 
             case 'd':
-                count('d', argv[2]);
+                count(debug, 'd', argv[2]);
                 break;
 
             case 'h':
                 printf("Usage: %s [-a] [-d] [-h] [FILE_NAME]\n", argv[0]);
                 printf("There are some option in this program.\n");
                 printf("If you do not specify an option, display results in ASCII code order.\n");
+                printf("-g\tDisplay all characters. This is debug option.\n");
                 printf("-a\tDisplay results in ascending order.\n");
                 printf("-d\tDisplay results in descending order.\n");
                 printf("-h\tDisplay this help.\n");
+                break;
+
+            case 'g':
+                debug = 1;
                 break;
 
             default:
@@ -42,7 +48,7 @@ int main(int argc, char *argv[]) {
 
 //  No option (ASCII code order)
     if (optf == 0) {
-        count('m', argv[1]);
+        count(0, 'm', argv[1]);
     }
 
     return 0;
