@@ -9,8 +9,10 @@ Reads a text file, counts the number of alphanumeric characters (az, AZ, 0-9) in
 ## Demo
 ![result](https://media.giphy.com/media/xUA7aNmZ75IuKx3L2g/giphy.gif)
 
-##Install
-Get clone make
+## Install
+If you have installed "gcc" and "make", clone this repository and cd into the directory.
+
+Input "make" and "Enter".
 
 ## Usage
 Usage: ./charcnt_srt [-a] [-d] [-h] [FILE_NAME]
