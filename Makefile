@@ -14,4 +14,4 @@ count.o : count.c defs.h
 	$(CC) -c $(CFLAGS) count.c
 
 clean:
-	-rm -rf $(PROGRAM) $(OBJS) $(PROGRAM).exe
+	-rm -rf $(PROGRAM)* $(OBJS) $(PROGRAM)
