@@ -33,3 +33,6 @@ If you do not specify an option, display results in ASCII code order.
 ```
 ./charcnt_srt [-a] [-d] [-h] [FILE_NAME]
 ```
+
+## License
+This software is released under the MIT License, see LICENSE.
