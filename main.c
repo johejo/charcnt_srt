@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
                 printf("Usage: %s [-a] [-d] [-h] [FILE_NAME]\n", argv[0]);
                 printf("There are some option in this program.\n");
                 printf("If you do not specify an option, display results in ASCII code order.\n");
-                printf("-g\tDisplay all characters. This is debug option.\n");
+                printf("-g\tDisplay all characters. (Use with other OPTION.)This is debug option.\n");
                 printf("-a\tDisplay results in ascending order.\n");
                 printf("-d\tDisplay results in descending order.\n");
                 printf("-h\tDisplay this help.\n");
