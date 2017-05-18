@@ -38,6 +38,7 @@ int main(int argc, char *argv[]) {
 
             case 'g':
                 debug = 1;
+                count(debug, 'm', argv[2]);
                 break;
 
             default:
@@ -48,7 +49,7 @@ int main(int argc, char *argv[]) {
 
 //  No option (ASCII code order)
     if (optf == 0) {
-        count(0, 'm', argv[1]);
+        count(debug, 'm', argv[1]);
     }
 
     return 0;
