@@ -38,7 +38,6 @@ int main(int argc, char *argv[]) {
 
             case 'g':
                 debug = 1;
-                count(debug, 'm', argv[2]);
                 break;
 
             default:
