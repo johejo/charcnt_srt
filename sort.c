@@ -18,7 +18,7 @@ void quicksort(MYCHAR LIST[], int left, int right){
             while (pivot < LIST[j].n) j--; //Search where pivot is greater than or equal to LIST[j].n
             if (i >= j) break;
 
-            //Exchange LIST[i] and LIST[j]
+            //Swap LIST[i] and LIST[j]
             tmp = LIST[i].n; LIST[i].n = LIST[j].n; LIST[j].n = tmp;
             c = LIST[i].c; LIST[i].c = LIST[j].c; LIST[j].c = c;
 
