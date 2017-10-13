@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     int debug = 0;
 
 //  Get option and count
-    while ((opt = getopt(argc, argv, "adhg")) != -1) {
+    while ((opt = getopt(argc, argv, "adhgv")) != -1) {
         optf = 1;
         switch (opt) {
             case 'a':
@@ -34,14 +34,19 @@ int main(int argc, char *argv[]) {
                 printf("-a\tDisplay results in ascending order.\n");
                 printf("-d\tDisplay results in descending order.\n");
                 printf("-h\tDisplay this help.\n");
+                printf("-v\tDisplay version.\n");
                 break;
 
             case 'g':
                 debug = 1;
                 break;
 
+            case 'v':
+                printf("charcnt_srt v0.1.0\n")
+                break;
+
             default:
-                fprintf(stderr, "Usage: %s [-a] [-d] [-h] [FILE_NAME]\n", argv[0]);
+                fprintf(stderr, "Usage: %s [-a] [-d] [-h] [-v] [FILE_NAME]\n", argv[0]);
                 break;
         }
     }
