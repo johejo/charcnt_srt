@@ -18,7 +18,7 @@ $ make
 ```
 
 ## Usage
-Usage: ./charcnt_srt [-a] [-d] [-h] [FILE_NAME]
+Usage: ./charcnt_srt [-a] [-d] [-h] [-v] [FILE_NAME]
 
 There are some option in this program.
 
@@ -32,9 +32,11 @@ If you do not specify an option, display results in ASCII code order.
 
 -h      Display this help.
 
+-v      Display version.
+
 
 ```
-./charcnt_srt [-a] [-d] [-h] [FILE_NAME]
+$ ./charcnt_srt [-a] [-d] [-h] [-v] [FILE_NAME]
 ```
 
 ## License
